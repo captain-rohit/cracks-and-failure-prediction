@@ -6,15 +6,20 @@ from sklearn.metrics import confusion_matrix
 
 from pre_processing import PreProcess
 
+#define img-processing parameters
+low_t = 10
+high_t = 100
+max_length = 5
+
 
 SRC_DIR = ''
 
 data_process = PreProcess(SRC_DIR)
-input_data_1 = data_process.process_image(low,high,max_length)
+input_data_1 = data_process.process_image(low_t,high_t,max_length)
 
 SRC_DIR = ''
 data_process = PreProcess(SRC_DIR)
-input_data_2 = data_process.process_image(low,high,max_length)
+input_data_2 = data_process.process_image(low_t,high_t,max_length)
 
 input_data_1.append(input_data_2)
 imgdata = input_data_1
